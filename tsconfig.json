@@ -1,0 +1,18 @@
+{
+  "extends": "ts-config-single-spa",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declarationDir": "dist",
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@global-style/*": ["global/style/*"],
+      "@utils/*": ["global/style/utils/*"],
+      "@interface/*": ["global/style/interface/*"],
+      "@views/*": ["views/*"]
+    }
+  },
+  "files": ["src/infralabs-safy.tsx"],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*"]
+}
