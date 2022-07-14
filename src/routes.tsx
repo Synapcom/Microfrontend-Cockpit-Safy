@@ -8,7 +8,7 @@ const Routes: React.FC = () => {
         <BrowserRouter>
             <SwitchRoutes>
                 <Route path='/safy' element={<Transactions />} />
-                <Route path='/safy/order/details/:orderNumber' element={<TransactionDetails />} />
+                <Route path='/safy/order/details/:transactionId' element={<TransactionDetails />} />
             </SwitchRoutes>
         </BrowserRouter>
     );
