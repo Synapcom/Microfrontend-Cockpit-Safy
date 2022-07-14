@@ -4,8 +4,12 @@ import Infra from '../../../assets/img/icons/Infra.svg';
 import { TransactionsInterface } from './interface';
 import api from '../../../api/api';
 import { TransactionsResponseInterface } from '../../../global/interface/transactionsResponse';
+import { formatValue } from '../../../global/utils/valueFormat';
+import { CompareStatusId } from '../../../global/utils/status';
+import { returnStatusClassName } from '../../../global/utils/statusFormatter';
+import datamock from '../../../assets/datamock.json';
 
-const Transactions: React.FC<TransactionsInterface> = ({ limitOrdersRequest = null, clientId, setOrderBy }) => {
+const Transactions: React.FC<TransactionsInterface> = ({ limitOrdersRequest = null, clientId, setOrderBy, deliveryAddress }) => {
 
     const [clientTransactions, setClientTransactions] = React.useState<TransactionsResponseInterface[]>([]);
 
@@ -13,15 +17,15 @@ const Transactions: React.FC<TransactionsInterface> = ({ limitOrdersRequest = nu
         getClientTransactions();
     }, [clientId]);
 
-    const getClientTransactions = async () => {
+    const getClientTransactions = () => {
         if (clientId !== null || clientId !== 0) {
-            const response = await api.get(`/transactions/client/${clientId}`, {
-                headers: {
-                    limit: limitOrdersRequest
-                }
-            });
+            const transactionFiltred = datamock
+            .transactions
+            .filter(transaction => transaction.client.clientId === clientId);
 
-            setClientTransactions(response.data);
+            //console.debug(transactionFiltred);
+
+            setClientTransactions(transactionFiltred);
         }
     };
 
@@ -42,33 +46,7 @@ const Transactions: React.FC<TransactionsInterface> = ({ limitOrdersRequest = nu
                 </div>
             </div>
             <ul className='cardList'>
-                <li className='card'>
-                    <section className='cardId'>
-                        <figure className='companyLogo'>
-                            <img src={Infra} alt='company-logo' />
-                        </figure>
-                        <div>
-                            <h2># 11111111</h2>
-                            <h2>10:30 - 00:00</h2>
-                        </div>
-                    </section>
-                    <section className='cardInfo'>
-                        <div>
-                            <h2><b>Canal:</b> Infrashop</h2>
-                            <h2>
-                                <b>Entrega: </b>
-                            </h2>
-                            <h2><b>Total: </b> R$ 120.00</h2>
-                        </div>
-                        <div>
-                            <span className={'Aprovado'}>
-                                Aprovado
-                            </span>
-                        </div>
-                    </section>
-                </li>
-
-                {/*clientTransactions.map(transaction => (
+                {clientTransactions.map(transaction => (
                     <li className='card' key={transaction.reference}>
                         <section className='cardId'>
                             <figure className='companyLogo'>
@@ -76,27 +54,26 @@ const Transactions: React.FC<TransactionsInterface> = ({ limitOrdersRequest = nu
                             </figure>
                             <div>
                                 <h2># {transaction.reference}</h2>
-                                <h2>{formatDateTime(transaction.orderDate)}</h2>
+                                <h2>{transaction.orderDate}</h2>
                             </div>
                         </section>
                         <section className='cardInfo'>
                             <div>
                                 <h2><b>Canal:</b> {transaction.store.name}</h2>
                                 <h2>
-                                    <b>Entrega: </b>
+                                    <b>Entrega: </b> {`${deliveryAddress.street}, ${deliveryAddress.number} - ${deliveryAddress.neighborhood} - ${deliveryAddress.complement} - ${deliveryAddress.postalCode} `}
                                 </h2>
                                 <h2><b>Total: </b> R$ {formatValue(transaction.value)}</h2>
                                 { }
                             </div>
                             <div>
-                                <span className={returnStatusClassName(transaction.status.statusId)}>
-                                    {statusFormat(transaction.status.statusId)}
+                                <span className={'orderStatusApproved'}>
+                                    Aprovado
                                 </span>
                             </div>
                         </section>
                     </li>
-                ))*/}
-
+                ))}
             </ul>
         </Container>
     );

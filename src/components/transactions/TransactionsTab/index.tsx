@@ -3,6 +3,7 @@ import List from './style';
 import { countStatusInterface, TransactionTabInterface } from "./interface";
 import TransactionsInAnalisys from '../TransactionsInAnalisys';
 import api from '../../../api/api';
+import datamock from '../../../assets/datamock.json';
 
 const TransactionsTab: React.FC<TransactionTabInterface> = ({setTabIndex, setTabStatus, tabIndex, transactions, setExpress, setTotalPages, currentPage, setCurrentPage, limit}) => {
 
@@ -20,7 +21,8 @@ const TransactionsTab: React.FC<TransactionTabInterface> = ({setTabIndex, setTab
 
     const getTabCounter = async () => {
         const response = await api.get<countStatusInterface>('/status/counter');
-        const { express, inAnalisys, queue, scheduled, total } = response.data;
+        // const { express, inAnalisys, queue, scheduled, total } = response.data;
+        const { express, inAnalisys, queue, scheduled, total } = datamock.status.counter;
 
         const totalPages = Math.ceil(total / limit);
 
