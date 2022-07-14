@@ -1,0 +1,373 @@
+{
+    "transactions": [
+        {
+            "transactionId": 1,
+            "reference": "3213111111",
+            "orderDate": "01/06/2021",
+            "client": {
+                "clientId": 1,
+                "providerId": 1,
+                "firstName": "Gustavo",
+                "lastName": "Melo",
+                "email": "gustavo@mail.com",
+                "document": "123.456.789-10",
+                "documentType": "CPF",
+                "phone": "11 4002-8922"
+            },
+            "store": {
+                "id": 1,
+                "providerId": 1,
+                "name": "Loja samsung",
+                "host": "Loja host",
+                "express": true,
+                "politics": "lorem ipsum"
+            },
+            "value": 211.68,
+            "status": {
+                "statusId": 6,
+                "statusName": "Aprovado"
+            },
+            "score": 23,
+            "address": {
+                "deliveryAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                },
+                "paymentAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                },
+                "buyerAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                }
+            },
+            "history": [
+                {
+                    "createdAt": "2020-11-05",
+                    "status": {
+                        "statusId": 6,
+                        "statusName": "Aprovado"
+                    }
+                }
+            ]
+        },
+        {
+            "transactionId": 2,
+            "reference": "5298496",
+            "orderDate": "03/10/2001",
+            "client": {
+                "clientId": 2,
+                "providerId": 2,
+                "firstName": "Fabricio",
+                "lastName": "Meneses",
+                "email": "fabricio@meneses.com",
+                "document": "123.456.789-10",
+                "documentType": "CPF",
+                "phone": "11 4002-8922"
+            },
+            "store": {
+                "id": 1,
+                "providerId": 1,
+                "name": "Loja samsung",
+                "host": "Loja host",
+                "express": true,
+                "politics": "lorem ipsum"
+            },
+            "value": 211.68,
+            "status": {
+                "statusId": 6,
+                "statusName": ""
+            },
+            "score": 23,
+            "address": {
+                "deliveryAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                },
+                "paymentAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                },
+                "buyerAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                }
+            },
+            "history": [
+                {
+                    "createdAt": "2020-11-05",
+                    "status": {
+                        "statusId": 6,
+                        "statusName": "Aprovado"
+                    }
+                }
+            ]
+        },
+        {
+            "transactionId": 3,
+            "reference": "84964198",
+            "orderDate": "06/09/2006",
+            "client": {
+                "clientId": 3,
+                "providerId": 1,
+                "firstName": "Rodrigo",
+                "lastName": "Avella",
+                "email": "rodrigo@avella.com",
+                "document": "123.456.789-10",
+                "documentType": "CPF",
+                "phone": "11 4002-8922"
+            },
+            "store": {
+                "id": 1,
+                "providerId": 1,
+                "name": "Loja samsung",
+                "host": "Loja host",
+                "express": true,
+                "politics": "lorem ipsum"
+            },
+            "value": 211.68,
+            "status": {
+                "statusId": 7,
+                "statusName": "Aprovado"
+            },
+            "score": 23,
+            "address": {
+                "deliveryAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                },
+                "paymentAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                },
+                "buyerAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                }
+            },
+            "history": [
+                {
+                    "createdAt": "2020-11-05",
+                    "status": {
+                        "statusId": 6,
+                        "statusName": "Aprovado"
+                    }
+                }
+            ]
+        },
+        {
+            "transactionId": 4,
+            "reference": "79849808484",
+            "orderDate": "01/01/2020",
+            "client": {
+                "clientId": 4,
+                "providerId": 1,
+                "firstName": "Finn",
+                "lastName": "Marthins",
+                "email": "finn@marthins.com",
+                "document": "123.456.789-10",
+                "documentType": "CPF",
+                "phone": "11 4002-8922"
+            },
+            "store": {
+                "id": 1,
+                "providerId": 1,
+                "name": "Loja samsung",
+                "host": "Loja host",
+                "express": true,
+                "politics": "lorem ipsum"
+            },
+            "value": 211.68,
+            "status": {
+                "statusId": 8,
+                "statusName": ""
+            },
+            "score": 23,
+            "address": {
+                "deliveryAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                },
+                "paymentAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                },
+                "buyerAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                }
+            },
+            "history": [
+                {
+                    "createdAt": "2020-11-05",
+                    "status": {
+                        "statusId": 6,
+                        "statusName": "Aprovado"
+                    }
+                }
+            ]
+        },
+        {
+            "transactionId": 5,
+            "reference": "89987892100",
+            "orderDate": "02/11/2022",
+            "client": {
+                "clientId": 5,
+                "providerId": 1,
+                "firstName": "Jake",
+                "lastName": "Magic",
+                "email": "jake@magic.com",
+                "document": "123.456.789-10",
+                "documentType": "CPF",
+                "phone": "11 4002-8922"
+            },
+            "store": {
+                "id": 1,
+                "providerId": 1,
+                "name": "Loja samsung",
+                "host": "Loja host",
+                "express": true,
+                "politics": "lorem ipsum"
+            },
+            "value": 211.68,
+            "status": {
+                "statusId": 7,
+                "statusName": ""
+            },
+            "score": 23,
+            "address": {
+                "deliveryAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                },
+                "paymentAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                },
+                "buyerAddress": {
+                    "street": "Rua das palmeiras",
+                    "number": "507",
+                    "complement": "casa",
+                    "neighborhood": "vila palmeiras",
+                    "postalCode": "00000321",
+                    "city": "são paulo",
+                    "state": "sp",
+                    "country": "BRA"
+                }
+            },
+            "history": [
+                {
+                    "createdAt": "2020-11-05",
+                    "status": {
+                        "statusId": 6,
+                        "statusName": "Aprovado"
+                    }
+                }
+            ]
+        }
+    ],
+    "stores": [
+        {
+            "id": 1,
+            "providerId": 1,
+            "name": "Loja samsung",
+            "host": "Loja host",
+            "express": true,
+            "politics": "lorem ipsum"
+        }
+    ],
+    "status": {
+        "counter": {
+            "express": 1,
+            "inAnalisys": 1,
+            "queue": 2,
+            "scheduled": 1,
+            "total": 5
+        }
+    }
+}
