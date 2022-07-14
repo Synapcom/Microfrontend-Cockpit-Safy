@@ -8,11 +8,23 @@ const Modal: React.FC<ModalInterface> = ({ accepted = true, show, setShowModal }
             <div>
                 <h1>{accepted ? 'Aprovar' : 'Reprovar'}</h1>
                 <form>
-                    <label>Motivo</label>
-                    <select required>
-                        <option>Selecione o motivo da {accepted ? 'aprovação' : 'reprovação'}</option>
-                        {/* TODO - fix options */}
-                    </select>
+                    {
+                        accepted ?
+                        <></>
+                        : (
+                            <React.Fragment>
+                                <label>Motivo</label>
+                                <select required>
+                                    <option>Selecione o motivo da reprovação</option>
+                                    <option>Cancelado pelo cliente</option>
+                                    <option>Fraude confirmada</option>
+                                    <option>Reprovado</option>
+                                    <option>Suspeita de fraude</option>
+                                </select>
+                            </React.Fragment>
+                        )
+                    }
+
 
                     <label>Observações</label>
                     <textarea></textarea>
