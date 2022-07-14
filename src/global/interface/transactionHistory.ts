@@ -2,8 +2,6 @@ import { StatusInterface } from './status';
 import { TransactionsResponseInterface } from './transactionsResponse';
 
 export interface TransactionsHistoryInterface {
-    id: number;
-    createdAt: Date;
+    createdAt: Date|string;
     status: StatusInterface;
-    transactions: TransactionsResponseInterface;
 }
