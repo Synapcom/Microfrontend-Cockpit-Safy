@@ -4,5 +4,5 @@ import { AddressInterface } from "../../../global/interface/address";
 export default interface ClientInformationInterface {
     client: ClientsInterface;
     address: AddressInterface;
-    shippingAddress: AddressInterface;
+    paymentAddress: AddressInterface;
 }

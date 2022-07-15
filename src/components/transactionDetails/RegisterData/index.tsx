@@ -10,19 +10,19 @@ const RegisterData: React.FC<RegisterDataInterface> = ({ client = null }) => {
             <table>
                 <th className='title'>
                     <td>Nome</td>
-                    <td>CPF</td>
+                    <td>{client.documentType}</td>
                 </th>
                 <th className='datas'>
-                    <td>Gustavo Melo</td>
-                    <td>000.000.000-11</td>
+                    <td>{`${client.firstName} ${client.lastName}`}</td>
+                    <td>{client.document}</td>
                 </th>
                 <th className='title'>
                     <td>Email</td>
                     <td>Telefone</td>
                 </th>
                 <th className='datas'>
-                    <td>gustavo@mail.com</td>
-                    <td>11 99999-9999</td>
+                    <td>{client.email}</td>
+                    <td>{client.phone}</td>
                 </th>
             </table>
         </Container>

@@ -9,6 +9,7 @@ import Container from './style';
 import Filter from '../../components/transactions/Filter';
 import Pagination from '../../components/transactions/Pagination';
 import Main from '../../templates/Main';
+import datamock from '../../assets/datamock.json';
 
 const Transactions: React.FC = () => {
 
@@ -48,14 +49,16 @@ const Transactions: React.FC = () => {
             }
         };
 
-        console.log(httpConfig);
+        //const request = await api.get('/transactions', httpConfig);
 
-        const request = await api.get('/transactions', httpConfig);
+        //setTransactions(request.data.items);
+        //setItemsPerPage(request.data.meta.itemsPerPage);
+        //setTotalPages(request.data.meta.totalPages);
+        //request.data.meta.currentPage < currentPage ? setCurrentPage(1) : setCurrentPage(request.data.meta.currentPage);
 
-        setTransactions(request.data.items);
-        setItemsPerPage(request.data.meta.itemsPerPage);
-        setTotalPages(request.data.meta.totalPages);
-        request.data.meta.currentPage < currentPage ? setCurrentPage(1) : setCurrentPage(request.data.meta.currentPage);
+        setTransactions(datamock.transactions);
+        setItemsPerPage(10);
+        setTotalPages(1);
     }
 
     React.useEffect(() => {

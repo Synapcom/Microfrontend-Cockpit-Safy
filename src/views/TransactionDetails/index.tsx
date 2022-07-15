@@ -15,8 +15,9 @@ import { ClientsInterface } from '../../global/interface/clients';
 import { StoresInterface } from '../../global/interface/stores';
 import Main from '../../templates/Main';
 import ControlButtons from '../../components/transactionDetails/ControlButtons';
-import LoadingCircle from '../../assets/img/loading.gif';
 import { AddressInterface } from '../../global/interface/address';
+import datamock from '../../assets/datamock.json';
+import LoadingCircle from '../../assets/img/loading.gif';
 
 const TransactionDetails: React.FC = () => {
 
@@ -27,28 +28,38 @@ const TransactionDetails: React.FC = () => {
     const [ client, setClient ] = React.useState<ClientsInterface>(null);
     const [ store, setStore ] = React.useState<StoresInterface>(null);
     const [ address, setAddress ] = React.useState<AddressInterface>(null);
-    const [ shippingAddress, setShippingAddress ] = React.useState<AddressInterface>(null);
+    const [ paymentAddress, setPaymentAddress ] = React.useState<AddressInterface>(null);
     const [ orderBy, setOrderBy ] = React.useState('t.orderDate');
 
     const params = useParams();
 
     const syncOrder = async () => {
-        const response = await api.get<TransactionsResponseInterface>(`/transactions/${params.orderNumber}`);
+        // const response = await api.get<TransactionsResponseInterface>(`/transactions/${params.orderNumber}`);
 
-        const responseAddress = await api.get(`/transactionAddress/${response.data.transactionId}`);
+        // const responseAddress = await api.get(`/transactionAddress/${response.data.transactionId}`);
 
-        // setTransaction(response.data);
-        // setClient(response.data.client);
-        // setStore(response.data.store);
+        // console.log(params);
+
+        console.debug(params);
+
+        const transactionFiltred = datamock
+        .transactions
+        .find(transaction => transaction.transactionId === Number(params.transactionId));
+
+        setClient(transactionFiltred.client);
+        setStore(transactionFiltred.store);
+        setTransaction(transactionFiltred);
+        setAddress(transactionFiltred.address.deliveryAddress);
+        setPaymentAddress(transactionFiltred.address.paymentAddress);
     };
 
     const defineViewContent = (index = 0) => {
         const views = [
-            <Transactions setOrderBy={setOrderBy} clientId={1} key={0} />,
-            <Transactions setOrderBy={setOrderBy} limitOrdersRequest={15} clientId={1} key={1} />,
-            <StatusTransaction transactionId={1} key={2} />,
-            <RegisterData client={null} key={3} />,
-            <StorePolitics politics={'lorem ipsum'} key={4} />,
+            <Transactions deliveryAddress={address} setOrderBy={setOrderBy} clientId={client.clientId} key={0} />,
+            <Transactions deliveryAddress={address} setOrderBy={setOrderBy} limitOrdersRequest={15} clientId={client.clientId} key={1} />,
+            <StatusTransaction transactionId={transaction.transactionId} key={2} />,
+            <RegisterData client={client} key={3} />,
+            <StorePolitics politics={store.politics} key={4} />,
         ];
 
         return views[index];
@@ -59,19 +70,19 @@ const TransactionDetails: React.FC = () => {
     }, [orderBy]);
 
     const render = () => {
-        /*if (transaction === null || client === null || store === null) {
+        if (transaction === null || client === null || store === null) {
             return (
                 <Loading>
                     <img src={LoadingCircle} alt="Loading circle..." />
                 </Loading>
             );
-        }*/
+        }
 
         return (
             <Main
                 breadcrumbTextPaths={['Pagina inicial', 'Cockpit', 'Pedido']}
                 breadcrumbURLPaths={['/', '/', '/']}
-                titleText={`Pedido ${params.orderNumber}`}
+                titleText={`Pedido ${transaction.reference}`}
                 previousURL={'/'}
                 controls={
                     <ControlButtons
@@ -93,7 +104,7 @@ const TransactionDetails: React.FC = () => {
                         {defineViewContent(tab)}
 
                         <ClientInformation
-                            shippingAddress={shippingAddress}
+                            paymentAddress={paymentAddress}
                             address={address}
                             client={client}
                         />

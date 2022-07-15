@@ -23,249 +23,6 @@ const TransactionsTable: React.FC<TransactionsTableInterface> = ({ transactions 
         return (express) ? 'Fila expressa' : ((status === 6) ? 'Aguardando análise' : 'Agendado');
     }
 
-    const homolog = () => {
-            return (
-                <>
-                    <TableRow
-                        onClick={() => navigate(`/safy/order/details/120`)}
-                        key='123'
-                        isExpress={true} >
-                        <td>
-                            <p>#111111111</p>
-                        </td>
-                        <td>
-                            <p>20/12/2022</p>
-                        </td>
-                        <td>
-                            <p>Samsung</p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>
-                                Gustavo Melo
-                                <br></br>
-                                gustavo@mail.com
-                            </p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>320</p>
-                        </td>
-                        <td>
-                            <p className="status">Aprovado</p>
-                        </td>
-                    </TableRow>
-                    <TableRow
-                        onClick={() => navigate(`/safy/order/details/120`)}
-                        key='123'
-                        isExpress={true} >
-                        <td>
-                            <p>#111111111</p>
-                        </td>
-                        <td>
-                            <p>20/12/2022</p>
-                        </td>
-                        <td>
-                            <p>Samsung</p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>
-                                Gustavo Melo
-                                <br></br>
-                                gustavo@mail.com
-                            </p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>320</p>
-                        </td>
-                        <td>
-                            <p className="status">Aprovado</p>
-                        </td>
-                    </TableRow>
-
-                    <TableRow
-                        onClick={() => navigate(`/safy/order/details/120`)}
-                        key='123'
-                        isExpress={true} >
-                        <td>
-                            <p>#111111111</p>
-                        </td>
-                        <td>
-                            <p>20/12/2022</p>
-                        </td>
-                        <td>
-                            <p>Samsung</p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>
-                                Gustavo Melo
-                                <br></br>
-                                gustavo@mail.com
-                            </p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>320</p>
-                        </td>
-                        <td>
-                            <p className="status">Aprovado</p>
-                        </td>
-                    </TableRow>
-
-                    <TableRow
-                        onClick={() => navigate(`/safy/order/details/120`)}
-                        key='123'
-                        isExpress={true} >
-                        <td>
-                            <p>#111111111</p>
-                        </td>
-                        <td>
-                            <p>20/12/2022</p>
-                        </td>
-                        <td>
-                            <p>Samsung</p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>
-                                Gustavo Melo
-                                <br></br>
-                                gustavo@mail.com
-                            </p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>320</p>
-                        </td>
-                        <td>
-                            <p className="status">Aprovado</p>
-                        </td>
-                    </TableRow>
-
-                    <TableRow
-                        onClick={() => navigate(`/safy/order/details/120`)}
-                        key='123'
-                        isExpress={true} >
-                        <td>
-                            <p>#111111111</p>
-                        </td>
-                        <td>
-                            <p>20/12/2022</p>
-                        </td>
-                        <td>
-                            <p>Samsung</p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>
-                                Gustavo Melo
-                                <br></br>
-                                gustavo@mail.com
-                            </p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>320</p>
-                        </td>
-                        <td>
-                            <p className="status">Aprovado</p>
-                        </td>
-                    </TableRow>
-
-                    <TableRow
-                        onClick={() => navigate(`/safy/order/details/120`)}
-                        key='123'
-                        isExpress={true} >
-                        <td>
-                            <p>#111111111</p>
-                        </td>
-                        <td>
-                            <p>20/12/2022</p>
-                        </td>
-                        <td>
-                            <p>Samsung</p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>
-                                Gustavo Melo
-                                <br></br>
-                                gustavo@mail.com
-                            </p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>320</p>
-                        </td>
-                        <td>
-                            <p className="status">Aprovado</p>
-                        </td>
-                    </TableRow>
-
-                    <TableRow
-                        onClick={() => navigate(`/safy/order/details/120`)}
-                        key='123'
-                        isExpress={true} >
-                        <td>
-                            <p>#111111111</p>
-                        </td>
-                        <td>
-                            <p>20/12/2022</p>
-                        </td>
-                        <td>
-                            <p>Samsung</p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>
-                                Gustavo Melo
-                                <br></br>
-                                gustavo@mail.com
-                            </p>
-                        </td>
-                        <td>
-                            <p>120.00 R$</p>
-                        </td>
-                        <td>
-                            <p>320</p>
-                        </td>
-                        <td>
-                            <p className="status">Aprovado</p>
-                        </td>
-                    </TableRow>
-                </>
-            );
-    }
-
     return (
         <Container>
             <thead>
@@ -282,16 +39,16 @@ const TransactionsTable: React.FC<TransactionsTableInterface> = ({ transactions 
                 </tr>
             </thead>
             <tbody>
-                {/*transactions.map(transaction => (
+                {transactions.map(transaction => (
                     <TableRow
-                        onClick={() => navigate(`/order/details/${transaction.reference}`)}
+                        onClick={() => navigate(`order/details/${transaction.transactionId}`)}
                         key={transaction.reference}
                         isExpress={transaction.store.express} >
                         <td>
                             <p>{transaction.reference}</p>
                         </td>
                         <td>
-                            <p>{formatDateTimeTag(transaction.orderDate)}</p>
+                            <p>{(transaction.orderDate)}</p>
                         </td>
                         <td>
                             <p>{transaction.store.name}</p>
@@ -316,8 +73,7 @@ const TransactionsTable: React.FC<TransactionsTableInterface> = ({ transactions 
                             <p className="status">{getStatusName(transaction.status.statusId, transaction.store.express)}</p>
                         </td>
                     </TableRow>
-                ))*/}
-                {homolog()}
+                ))}
             </tbody>
         </Container>
     );

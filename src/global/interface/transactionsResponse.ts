@@ -4,12 +4,11 @@ import { StatusInterface } from './status';
 
 export interface TransactionsResponseInterface {
     transactionId: number;
-    reference: number;
+    reference: string;
     orderDate: string;
     client: ClientsInterface;
     store: StoresInterface;
     value: number;
     status: StatusInterface;
-    requestJson: JSON;
     score: number;
 }

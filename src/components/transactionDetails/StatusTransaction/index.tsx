@@ -6,14 +6,15 @@ import { TransactionsHistoryInterface } from '../../../global/interface/transact
 import { CompareStatusId } from '../../../global/utils/status';
 import { formatDate } from '../../../global/utils/timeFormat';
 import { CgShapeCircle } from 'react-icons/cg';
+import datamock from '../../../assets/datamock.json';
 
 const StatusOrder: React.FC<StatusTransactionInterface> = ({ transactionId }) => {
     const [statusHistory, setStatusHistory] = React.useState<TransactionsHistoryInterface[]>([]);
 
     const getStatusHistory = async () => {
-        const response = await api.get(`transactions/history/${transactionId}`);
+        const transactionFiltred = datamock.transactions.find(transaction => transaction.transactionId === transactionId);
 
-        setStatusHistory(response.data);
+        setStatusHistory(transactionFiltred.history);
     };
 
     React.useEffect(() => {
@@ -22,14 +23,14 @@ const StatusOrder: React.FC<StatusTransactionInterface> = ({ transactionId }) =>
 
     return (
         <Status>
-            <h1>{0} status</h1>
+            <h1>{statusHistory.length} status</h1>
             <ul>
-                {/*statusHistory.map(status => (
-                    <li className='step' key={status.id}>
+                {statusHistory.map(status => (
+                    <li className='step' key={status.createdAt.toString()}>
                         <figure>
                             <CgShapeCircle
                                 fontSize={24}
-                                className={CompareStatusId(status.id).className} />
+                                className={CompareStatusId(status.status.statusId).className} />
                         </figure>
                         <div>
                             <p>
@@ -41,7 +42,7 @@ const StatusOrder: React.FC<StatusTransactionInterface> = ({ transactionId }) =>
                         </div>
                         <span></span>
                     </li>
-                ))*/}
+                ))}
             </ul>
         </Status>
     );
